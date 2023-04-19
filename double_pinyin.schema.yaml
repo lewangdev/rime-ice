@@ -4,7 +4,7 @@
 
 # 复制自 rime_ice.schema.yaml ，适配了双拼。
 # 双拼键位映射复制自 https://github.com/rime/rime-double-pinyin
-#     双拼和全拼主要就是 speller/algebra 和 translator/preedit_format 这里有区别。
+# 双拼之间主要就是 speller/algebra 和 translator/preedit_format 这里有区别。
 #
 # 全拼的自定义文本和双拼有些冲突，改成了 custom_phrase_double ，需要创建 custom_phrase_double.txt 文件。
 #
@@ -98,11 +98,12 @@ reduce_english_filter:
   # 降低到第 idx 个位置
   idx: 2
   # 要降低的单词，匹配的是输入码，即全小写。
-  words: [rug, bus, ship, laos, bail, bam, bans, bib, bos, chic, chit, dab, dag,
+  words: [nav,
+  rug, bus, ship, laos, bail, bam, bans, bib, bos, chic, chit, dab, dag,
   dal, dit, dub, dug, fab, gam, ger, gus, hem, hep, hud, kat, lam, lax, lex, lug,
   lux, moc, mos, mot, mum, nad, nay, nib, nip, pak, pap, pax, rig, rum, sac, sal,
   sax, sec, shin, sis, ska, slang, sus, tad, taj, tac, tic, yep, yum, fax, cain,
-  key, mob, buy, dam]
+  key, mob, buy, dam, wap]
 
 
 # 引入八股文
@@ -218,8 +219,8 @@ recognizer:
 
 # 从 default 继承快捷键
 key_binder:
-  import_preset: default
-  # bindings: # 也可以再增加方案专属的快捷键
+  import_preset: default  # 从 default.yaml 继承通用的
+  # bindings:             # 也可以再增加方案专有的
 
 
 # 拼写设定
@@ -228,7 +229,6 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"  # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   algebra:
-    - abbrev/^(.).+$/$1/ # 首字母简拼
     - erase/^xx$/
     - derive/^([jqxy])u$/$1v/
     - derive/^([aoe])([ioun])$/$1$1$2/
@@ -259,5 +259,6 @@ speller:
     - xform/(.)ou$/$1B/
     - xform/in$/N/
     - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
+    - abbrev/^(.).+$/$1/ # 首字母简拼
     # 可输入大写字母。因为上面的双拼拼写规则用掉了大写字母。做了 xlit 转写，同时适配全拼和双拼。
     - xlit/āḃçďēḟḡĥīĵḱĺḿńōṕɋŕśťūṽẃẋȳź/ABCDEFGHIJKLMNOPQRSTUVWXYZ/

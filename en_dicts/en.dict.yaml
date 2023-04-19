@@ -14,7 +14,7 @@
 # 转化应当大写的单词
 ---
 name: en
-version: "2023-04-11"
+version: "2023-04-19"
 sort: by_weight
 ...
 # +_+
@@ -735,7 +735,7 @@ amuse	amuse
 amusement	amusement
 amusing	amusing
 Amy	Amy
-an	an
+# an	an
 ana	ana
 anabolic	anabolic
 anaheim	anaheim
@@ -9201,7 +9201,7 @@ IE	IE
 # iec	iec
 IEEE	IEEE
 # ies	ies
-# ietf	ietf
+IETF	IETF
 if	if
 # ifdef	ifdef
 # ifs	ifs
@@ -11454,9 +11454,9 @@ marine	marine
 mariner	mariner
 mariners	mariners
 Marines	Marines
-marino	marino
-mario	mario
-marion	marion
+Marino	Marino
+Mario	Mario
+Marion	Marion
 marital	marital
 maritime	maritime
 mark	mark
@@ -11710,7 +11710,7 @@ melt	melt
 melted	melted
 melting	melting
 Melvin	Melvin
-mem	mem
+# mem	mem
 member	member
 # memberlistmemberlist	memberlistmemberlist
 members	members
@@ -20903,10 +20903,10 @@ XXL	XXL
 # ya	ya
 yacht	yacht
 yachts	yachts
-yahoo	yahoo
+Yahoo	Yahoo
 Yakima	Yakima
-yale	yale
-yamaha	yamaha
+Yale	Yale
+Yamaha	Yamaha
 yan	yan
 yang	yang
 Yankee	Yankee
@@ -20955,7 +20955,7 @@ York	York
 yorker	yorker
 Yorkshire	Yorkshire
 Yosemite	Yosemite
-you	you
+# you	you
 young	young
 younger	younger
 youngest	youngest
