@@ -14,7 +14,7 @@ schema:
     https://github.com/iDvel/rime-ice
   dependencies:
     - melt_eng  # 英文输入，作为次翻译器挂载到拼音方案
-    - liangfen  # 两分拼字，作为反查挂载到拼音方案
+    #- liangfen  # 两分拼字，作为反查挂载到拼音方案
 
 
 # 开关
@@ -63,7 +63,7 @@ engine:
     - lua_translator@date_translator      # 时间、日期、星期
     - table_translator@custom_phrase      # 自定义短语 custom_phrase.txt
     - table_translator@melt_eng           # 英文输入
-    - reverse_lookup_translator@liangfen  # 反查，两分拼字
+    #- reverse_lookup_translator@liangfen  # 反查，两分拼字
     - lua_translator@unicode              # Unicode
   filters:
     - lua_filter@long_word_filter       # 长词优先
@@ -134,10 +134,10 @@ melt_eng:
 
 
 # 反查：两分（拼字）
-liangfen:
-  dictionary: liangfen     # 挂载两分词典 liangfen.dict.yaml
-  prefix: "u"              # 以 u 开头来反查
-  enable_completion: true  # 补全提示
+#liangfen:
+#  dictionary: liangfen     # 挂载两分词典 liangfen.dict.yaml
+#  prefix: "u"              # 以 u 开头来反查
+#  enable_completion: true  # 补全提示
   # tips: 〔两分〕          # 反查时显示的文字，建议注释掉，否则很多 u 开头的英文单词也会显示这个
 
 
