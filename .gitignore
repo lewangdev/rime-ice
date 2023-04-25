@@ -16,3 +16,5 @@ others/script/scel2txt/scel/*
 rime_console
 rime_deployer
 rime_patch
+
+cn_dicts/contact.dict.yaml
